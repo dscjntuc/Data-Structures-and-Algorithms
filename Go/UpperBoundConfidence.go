@@ -23,12 +23,10 @@ func UpperBoundConfidence(dataSet [][]float64) (float64, []float64, []float64, [
 	// Ranges over datset
 	for n := 0; n < len(N); n++ {
 		x := 0
-		//log.Println(n)
 		maxUpperBound := float64(0)
 		// Ranges over items
 		for j := 0; j < len(d); j++ {
 			upperBound := float64(0)
-			// This makes sure that only one of the 10 adds is selected at a time
 			if numberOfSelections[j] > 0 {
 				averageReward := sumOfRewards[j] / numberOfSelections[j]
 				// This is a constant -- DO NOT CHANGE --
@@ -36,9 +34,9 @@ func UpperBoundConfidence(dataSet [][]float64) (float64, []float64, []float64, [
 				upperBound = float64(averageReward) + deltaI
 			} else {
 				/*
-								First iteration upper bound equal to 1^400,
-				            	Very large because it needs to evaluate to true on the first
-				            	iteration
+									First iteration upper bound equal to 1^400,
+					            	Very large because it needs to evaluate to true on the first
+					            	iteration
 				*/
 				upperBound = math.Pow(10, 400)
 			}
@@ -74,3 +72,5 @@ func initializeNilIntSlice(n int) []float64 {
 	}
 	return negativeList
 }
+
+// Time Complexity O(n^2)
