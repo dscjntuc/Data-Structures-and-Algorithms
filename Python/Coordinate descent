@@ -1,6 +1,7 @@
 import math
 from prettytable import PrettyTable
 
+
 class CoordinateDescent:
     def __init__(self):
         self.start_x = 1.3
@@ -45,6 +46,7 @@ class CoordinateDescent:
                 toggle = True
             counter = counter + 1
             table.add_row([counter, "%.5f" % x_last, "%.5f" % y_last, "%.8f" % self.func(x_last, y_last), self.alpha])
+
 
 table = PrettyTable()
 object1 = CoordinateDescent()
