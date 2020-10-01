@@ -23,6 +23,7 @@ class Trie {
     }
 
     /** Inserts a word into the trie. */
+    /** Complexity:O(n) where n is length of string to add */
     public void insert(String word) {
         TrieNode current = this.head;
         for (int pos = 0; pos < word.length(); pos++) {
@@ -36,6 +37,7 @@ class Trie {
     }
 
     /** Returns if the word is in the trie. */
+    /** Complexity: O(n) where n is length of string to search*/
     public boolean search(String word) {
         boolean exists = true;
         TrieNode current = this.head;
@@ -55,6 +57,7 @@ class Trie {
     }
 
     /** Returns if there is any word in the trie that starts with the given prefix. */
+    /** Complexity: O(n) where n is length of prefix to search */
     public boolean startsWith(String prefix) {
         boolean exists = true;
         TrieNode current = this.head;
