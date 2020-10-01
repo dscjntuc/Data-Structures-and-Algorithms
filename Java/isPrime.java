@@ -1,12 +1,6 @@
 import java.util.*;
-import java.lang.*;
-
-/**
- * isPrime
- */
 public class isPrime {
     static boolean isPrime(int x) {
-
         if (x == 2) {
             // 2 is prime
             return true;
@@ -18,8 +12,7 @@ public class isPrime {
             // 1 is neither prime nor composite
             return false;
         }
-        // But is not then:-
-
+        // Otherwise: 
         for (int i = 3; i <= Math.sqrt(x); i += 2) {
             if (x % i == 0)
                 // if i is factor of x
@@ -41,5 +34,5 @@ public class isPrime {
 
     }
 }
-// This code is contributed by Manan Chawla
+// This code is contributed by Anoop Gupta
 // Time complexity = O(n)
