@@ -13,7 +13,13 @@ Currently four language are available and many more to come.
 Feel free to add more............
 
 # Content in C:-
-*
+* Create Bubblesort
+* Selection Sort
+* Insertion Sort
+* Modular Exponentiation
+
+# Content in GO:-
+
 
 
 
