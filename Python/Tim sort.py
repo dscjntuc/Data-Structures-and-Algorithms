@@ -1,3 +1,6 @@
+#It has O(n*logn) time complexity for worst case and O(n) for best case scenarios.
+
+
 def timsort(array):
     min_run = 32
     n = len(array)
