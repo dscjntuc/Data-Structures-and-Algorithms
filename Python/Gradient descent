@@ -1,0 +1,61 @@
+import math
+from prettytable import PrettyTable
+
+
+class GradientDescent:
+    def __init__(self):
+        self.a = 2 / math.sqrt(3)
+        self.b = 3 / math.sqrt(3)
+        self.x_start = 1.3
+        self.y_start = self.x_start
+        self.epsilon = 0.01
+        self.alpha = 0.1
+        self.teta = 0.8
+
+    def func(self, x, y):
+        return x * y * math.sqrt(1 - pow(x, 2) / 4 - pow(y, 2) / 9)
+
+    def derivative_x(self, x, y):
+        return y * math.sqrt(1 - pow(x, 2) / 4 - pow(y, 2) / 9) - pow(x, 2) * y / \
+               (4 * math.sqrt(1 - pow(x, 2) / 4 - pow(y, 2) / 9))
+
+    def derivative_y(self, x, y):
+        return x * math.sqrt(1 - pow(x, 2) / 4 - pow(y, 2) / 9) - pow(y, 2) * x / \
+               (18 * math.sqrt(1 - pow(x, 2) / 4 - pow(y, 2) / 9))
+
+    def Armijo(self, x, y):
+        if self.func(x + self.alpha*self.derivative_x(x,y), y + self.alpha*self.derivative_y(x,y)) > self.func(x,y)\
+                - self.epsilon*self.alpha*pow(self.norm(x,y), 2):
+            self.alpha = self.alpha*self.teta
+
+    def norm(self, x, y):
+        return math.sqrt(pow(self.derivative_x(x, y), 2) + pow(self.derivative_y(x, y), 2))
+
+    def loop(self):
+        x_prev = 0
+        x_last = self.x_start
+        y_prev = 0
+        y_last = self.y_start
+        counter = 0
+        table.field_names = ["N", "x_k", "y_k", "f(x_k, y_k)", "delta","alpha"]
+        table.add_row([counter, x_last, y_last, self.func(x_last, y_last), "-", self.alpha])
+        while self.norm(x_last, y_last) > self.epsilon:
+            print(self.derivative_x(x_last, y_last))
+            print(self.derivative_y(x_last, y_last))
+            y_prev = y_last
+            x_prev = x_last
+            x_last = x_prev + self.alpha * self.derivative_x(x_prev, y_prev)
+            y_last = y_prev + self.alpha * self.derivative_y(x_prev, y_prev)
+            self.Armijo(x_last, y_last)
+            counter = counter + 1
+            table.add_row([counter, x_last, y_last, self.func(x_last, y_last), self.norm(x_last, y_last), self.alpha])
+            print(counter)
+            if counter == 100:
+                break
+
+
+table = PrettyTable()
+object1 = GradientDescent()
+object1.loop()
+print(table)
+
