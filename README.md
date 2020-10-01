@@ -18,17 +18,26 @@ Feel free to add more............
 * Insertion Sort
 * Modular Exponentiation
 
-# Content in GO:-
+# Content in Go:-
+* UpperBoundConfidence
 
+# Content in JAVA:-
 
+* BankerAlgo.java
+* BinarySearch.java
+* IsPrime.java
+* BoyerMooreMajorityElement.java
+* BubbleSort.java
+* InsertionSort.java
 
+# Content in Python:-
 
-
-
-
-
-
+* Binary search.py
+* LinearSearch.py
+* Tim sort.py
+* Selection sort.py
 
 
 # Contributions
-This repository is open to any kind of contributions. Any kind of suggestoions, enhancements, bug reports are always welcome. 
+This repository is open to any kind of contributions. Any kind of suggestions, enhancements, bug reports are always welcome. 
+
