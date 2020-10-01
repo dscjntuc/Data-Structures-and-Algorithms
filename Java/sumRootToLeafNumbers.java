@@ -21,7 +21,7 @@ class TreeNode {
 
 class sumRootToLeafNums {
     private static int sum = 0;
-
+    //Complexity:O(n) where n is height of tree
     public void getSum(TreeNode node, int num) {
         if (node == null) return;
         num = num * 10 + node.val;
