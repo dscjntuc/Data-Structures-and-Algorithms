@@ -13,7 +13,9 @@ Feel free to add more............
 # Structure
 This repositry not based on a particular language. It contains various programming languages. 
 
-Browse through the repositiry to explore and learn stuff. Here are some direct links to each topic.
+Browse through the repositiry to explore and learn stuff. This repo also contains the Big - O cheatsheet for all types Data Structures and also for the basic algorithmic stuff like various types of sorting algorithms.
+
+Here are some direct links to each topic.
 
 # Content in C++:-
  [C++](https://github.com/prakhyatkarri/Data-Structures-and-Algorithms/tree/master/C%2B%2B)
