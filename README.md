@@ -15,6 +15,8 @@ This repositry not based on a particular language. It contains various programmi
 
 Browse through the repositiry to explore and learn stuff. This repo also contains the Big - O cheatsheet for all types Data Structures and also for the basic algorithmic stuff like various types of sorting algorithms.
 
+Link to cheatsheet [Big-O Cheatsheet](https://github.com/manjunani/Data-Structures-and-Algorithms/blob/master/big-%20o%20cheatsheet.png)
+
 Here are some direct links to each topic.
 
 # Content in C++:-
