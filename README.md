@@ -36,6 +36,7 @@ Here are some direct links to each topic.
 * BoyerMooreMajorityElement.java
 * BubbleSort.java
 * InsertionSort.java
+* ShortestPalindrome.java
 # Content in Python:-
  [Python](https://github.com/prakhyatkarri/Data-Structures-and-Algorithms/tree/master/Python)
 * Binary search.py
