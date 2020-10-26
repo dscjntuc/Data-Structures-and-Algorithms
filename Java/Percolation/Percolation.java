@@ -8,6 +8,8 @@
  * with insulated and metallic materials. Percolation would be used to find the 
  * percentage of metallic material needed to be an electrical conductor
  *
+ * Time Complexity: O(N^2)
+ *
  */
 
 // Models an N-by-N percolation system.
