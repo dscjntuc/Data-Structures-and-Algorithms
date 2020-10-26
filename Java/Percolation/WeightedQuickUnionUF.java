@@ -1,7 +1,9 @@
 
 
-//import edu.princeton.cs.algs4.StdIn;
-//import edu.princeton.cs.algs4.StdOut;
+/**
+* Time Complexity: O(N^2)
+*
+*/
 
 public class WeightedQuickUnionUF {
     private int[] parent;   // parent[i] = parent of i
